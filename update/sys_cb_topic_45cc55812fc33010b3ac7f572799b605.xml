@@ -199,17 +199,23 @@
             "mode": "simple"
           },
           "listOfLinks": ""
+        },
+        "4acf3e5f74b6466a9cd0a93d58cfec3b": {
+          "id": "4acf3e5f74b6466a9cd0a93d58cfec3b",
+          "stepType": "TextOutput",
+          "name": "Live Agent status",
+          "secure": false,
+          "value": {
+            "value": "(function execute() {\n    /* Return a quoted string.  For example:\n\n       if (vaInputs.first_name == 'Bill') {\n           return gs.getMessage('hi there {0}', [vaInputs.first_name]);\n       } else {\n           return gs.getMessage('how are you {0}', [vaInputs.last_name]);\n       }\n    */\n    var status = 'Live agent is '\n    if(vaSystem.isLiveAgentAvailable()) {\n        status = status + 'available.';\n    }\n    else {\n        status = status + 'not currently available.';\n    }\n    return status;\n})()\n",
+            "mode": "script"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
         }
       },
       "edges": [
-        {
-          "id": "d0b59d7fc9994a2aa8141ece0f22c59f",
-          "edgeType": "Edge",
-          "source": "1ffd2805da914161b3b4003175c76707",
-          "target": "28218e8bd5734ca58580ffe3101764ce",
-          "sourcePort": "",
-          "targetPort": ""
-        },
         {
           "id": "d0f67a3037a04b6aa438b046825d1a17",
           "edgeType": "Edge",
@@ -257,6 +263,22 @@
           "edgeType": "Edge",
           "source": "8cf265f1106a45c3a62a955c0a294176",
           "target": "9c7cad5380cd46b3b4413dc0e2b74b18",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d0b59d7fc9994a2aa8141ece0f22c59f",
+          "edgeType": "Edge",
+          "source": "1ffd2805da914161b3b4003175c76707",
+          "target": "4acf3e5f74b6466a9cd0a93d58cfec3b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "9e345ed9387f4a019470677673996f1f",
+          "edgeType": "Edge",
+          "source": "4acf3e5f74b6466a9cd0a93d58cfec3b",
+          "target": "28218e8bd5734ca58580ffe3101764ce",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -355,14 +377,14 @@
         <sys_created_on>2021-10-05 11:59:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>45cc55812fc33010b3ac7f572799b605</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Report IT Issue</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_cb_topic_45cc55812fc33010b3ac7f572799b605</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-05 12:03:12</sys_updated_on>
+        <sys_updated_on>2021-10-12 08:14:40</sys_updated_on>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>
         <variables/>
